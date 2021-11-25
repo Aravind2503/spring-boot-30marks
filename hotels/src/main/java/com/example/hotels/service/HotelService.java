@@ -34,8 +34,10 @@ public class HotelService {
 
     public Hotel update(Hotel hotel, String hotelId) {
         Hotel hotel1 = hotelRepository.findById(hotelId).get();
-        hotel1.setAuthor(hotel.getAuthor());
-        hotel1.setPublisher(hotel.getPublisher());
+        hotel1.setHname(hotel.getHname());
+        hotel1.setOname(hotel.getOname());
+        hotel1.setAddress(hotel.getAddress());
+        hotel1.setNumRooms(hotel.getNumRooms());
         hotelRepository.save(hotel1);
         return hotel1;
     }

@@ -11,17 +11,21 @@ public class Hotel {
     @Id
     private String id;
     @Column
-    private String author;
+    private String hname;
     @Column
-    private String publisher;
+    private String oname;
+    @Column
+    private String address;
+    @Column
+    private int numRooms;
 	public Hotel()
 	{
 		
 	}
     public Hotel(String string, String string2, String string3) {
         id=string;
-		author=string2;
-		publisher=string3;
+		hname=string2;
+		oname=string3;
     }
 
     public String getId() {
@@ -32,20 +36,38 @@ public class Hotel {
         this.id = id;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getHname() {
+        return hname;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setHname(String hname) {
+        this.hname = hname;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getOname() {
+        return oname;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setOname(String oname) {
+        this.oname = oname;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getNumRooms() {
+        return numRooms;
+    }
+
+    public void setNumRooms(int numRooms) {
+        this.numRooms = numRooms;
+    }
+
+
 }
 
