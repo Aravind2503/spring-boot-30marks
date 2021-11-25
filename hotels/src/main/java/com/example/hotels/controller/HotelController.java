@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 
 @RestController
+@RequestMapping("/customer")
 public class HotelController {
     private final HotelService hotelService;
 
