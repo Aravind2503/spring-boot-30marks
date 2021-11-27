@@ -15,6 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/")
+class infoRoute{
+@GetMapping("actuator/info")
+String infoHome(){
+    return "Info Home Page"; 
+}
+}
 @RequestMapping("/customer")
 public class customerRoutes {
 
@@ -23,7 +30,6 @@ public class customerRoutes {
 
     @Autowired
     private bookedRepository book;
-
     @GetMapping("/showall")
     public @ResponseBody Iterable<Customer> showall() {
         Iterable<Customer> cc = cust.findAll();
