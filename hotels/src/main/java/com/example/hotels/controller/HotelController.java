@@ -16,7 +16,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/hotel")
 public class HotelController {
     private final HotelService hotelService;
 
@@ -26,8 +26,8 @@ public class HotelController {
 
     @GetMapping("/reservationForm")
     public String reservationForm(Model model) {
-      model.addAttribute("reservationForm", new Hotel());
-      return "reservationForm";
+        model.addAttribute("reservationForm", new Hotel());
+        return "reservationForm";
     }
 
     @GetMapping("/getAllhotels")
@@ -35,9 +35,9 @@ public class HotelController {
         return hotelService.getAllhotels();
     }
 
-    @GetMapping("/get/{hotelID}")
-    public Hotel gethotel(@PathVariable String hotelID) {
-        return hotelService.gethotel(hotelID);
+    @GetMapping("/get/{hotelId}")
+    public Hotel gethotel(@PathVariable String hotelId) {
+        return hotelService.gethotel(hotelId);
     }
 
     @PostMapping("/createhotel")

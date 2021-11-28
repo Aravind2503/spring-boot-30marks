@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table 
+@Table
 public class Hotel {
     @Id
-    private String id;
+    private String hotelId;
     @Column
     private String hname;
     @Column
@@ -18,22 +18,23 @@ public class Hotel {
     private String address;
     @Column
     private int numRooms;
-	public Hotel()
-	{
-		
-	}
+
+    public Hotel() {
+
+    }
+
     public Hotel(String string, String string2, String string3) {
-        id=string;
-		hname=string2;
-		oname=string3;
+        hotelId = string;
+        hname = string2;
+        oname = string3;
     }
 
     public String getId() {
-        return id;
+        return hotelId;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.hotelId = id;
     }
 
     public String getHname() {
@@ -68,6 +69,4 @@ public class Hotel {
         this.numRooms = numRooms;
     }
 
-
 }
-
